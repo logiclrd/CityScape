@@ -1,0 +1,3 @@
+#!/bin/sh
+
+convert -delay 14 -dispose Previous Frames/*.png cityscape.mng
