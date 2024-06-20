@@ -232,7 +232,7 @@ class Program
 	{
 		var imageInfo = new SKImageInfo(
 			width: 1920,
-			height: staticImage.Height,
+			height: 1080,
 			colorType: SKColorType.Rgba8888,
 			alphaType: SKAlphaType.Unpremul);
 
@@ -240,12 +240,12 @@ class Program
 
 		var canvas = surface.Canvas;
 
-		canvas.DrawImage(staticImage, xOffset, 0);
+		canvas.DrawImage(staticImage, xOffset, 1080 - staticImage.Height);
 
 		if (xOffset > 0)
-			canvas.DrawImage(staticImage, xOffset - staticImage.Width, 0);
+			canvas.DrawImage(staticImage, xOffset - staticImage.Width, 1080 - staticImage.Height);
 		else
-			canvas.DrawImage(staticImage, xOffset + staticImage.Width, 0);
+			canvas.DrawImage(staticImage, xOffset + staticImage.Width, 1080 - staticImage.Height);
 
 		return surface.Snapshot();
 	}
